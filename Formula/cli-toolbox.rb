@@ -5,13 +5,13 @@
 class CliToolbox < Formula
   desc "A collection of various cli tools"
   homepage "https://github.com/tiborhercz/cli-toolbox"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tiborhercz/cli-toolbox/releases/download/v0.2.0/cli-toolbox_0.2.0_darwin_amd64.tar.gz"
-      sha256 "c8b37300104091c1c6a132c419af1f8b7030566a0c1e45a375108b8c64521308"
+      url "https://github.com/tiborhercz/cli-toolbox/releases/download/v0.3.0/cli-toolbox_0.3.0_darwin_amd64.tar.gz"
+      sha256 "2bfcbcbd9d95fdeb96840c261a55e8831a2ca5c5a7a8b25bd0cd7489f350fc88"
 
       def install
         bin.install "cli-toolbox"
@@ -21,8 +21,8 @@ class CliToolbox < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/tiborhercz/cli-toolbox/releases/download/v0.2.0/cli-toolbox_0.2.0_linux_amd64.tar.gz"
-      sha256 "9168b4794f912c7eb491717d1a5c4100e577504123c9c9de7cf73c530149e1af"
+      url "https://github.com/tiborhercz/cli-toolbox/releases/download/v0.3.0/cli-toolbox_0.3.0_linux_amd64.tar.gz"
+      sha256 "571067d74168378227aafd41d2e51910f1bb0774a619e05e6a1c6f8b624241b5"
 
       def install
         bin.install "cli-toolbox"
