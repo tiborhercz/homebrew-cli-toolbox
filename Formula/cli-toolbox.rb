@@ -5,24 +5,32 @@
 class CliToolbox < Formula
   desc "A collection of various cli tools"
   homepage "https://github.com/tiborhercz/cli-toolbox"
-  version "0.4.1"
+  version "0.5.2"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/tiborhercz/cli-toolbox/releases/download/v0.4.1/cli-toolbox_0.4.1_darwin_amd64.tar.gz"
-      sha256 "0359fcd8b0050143e06300ad3a418cddf1b843a769cd66b064ff77be4548232b"
+    url "https://github.com/tiborhercz/cli-toolbox/releases/download/v0.5.2/cli-toolbox_0.5.2_darwin_amd64.tar.gz"
+    sha256 "9fc352d70d20e4e73eb7636a48ed4cee374cce3e69008ce06faf6e00e84e7b7d"
 
-      def install
-        bin.install "cli-toolbox"
+    def install
+      bin.install "cli-toolbox"
+    end
+
+    if Hardware::CPU.arm?
+      def caveats
+        <<~EOS
+          The darwin_arm64 architecture is not supported for the CliToolbox
+          formula at this time. The darwin_amd64 binary may work in compatibility
+          mode, but it might not be fully supported.
+        EOS
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/tiborhercz/cli-toolbox/releases/download/v0.4.1/cli-toolbox_0.4.1_linux_amd64.tar.gz"
-      sha256 "7af9998ae26fa5414c4b85197737c831612f0bd63624ffd527a37bf08904facf"
+      url "https://github.com/tiborhercz/cli-toolbox/releases/download/v0.5.2/cli-toolbox_0.5.2_linux_amd64.tar.gz"
+      sha256 "eec10dd8f26b9117ab0b49a698f334d7ab1be85e90d86d5fc3da409680c4a085"
 
       def install
         bin.install "cli-toolbox"
