@@ -5,12 +5,12 @@
 class Toolbox < Formula
   desc "A collection of various cli tools"
   homepage "https://github.com/tiborhercz/toolbox"
-  version "0.6.2"
+  version "0.7.1"
   license "MIT"
 
   on_macos do
-    url "https://github.com/tiborhercz/toolbox/releases/download/v0.6.2/toolbox_0.6.2_darwin_amd64.tar.gz"
-    sha256 "44a5ed8130be9f3fc6b5fe8a7a89be374fa644efbd1696aa58e97f9e38249ab9"
+    url "https://github.com/tiborhercz/toolbox/releases/download/v0.7.1/toolbox_0.7.1_darwin_amd64.tar.gz"
+    sha256 "dc16920f4407c87de91e12ec3697dd7fcecc3deba51eaa53054c9c9eb68992a3"
 
     def install
       bin.install "toolbox"
@@ -29,8 +29,8 @@ class Toolbox < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/tiborhercz/toolbox/releases/download/v0.6.2/toolbox_0.6.2_linux_amd64.tar.gz"
-      sha256 "3a7968b1cfd06e47045be8042fd20b6ed4b8aafde2bb5127dde03d598c5b377b"
+      url "https://github.com/tiborhercz/toolbox/releases/download/v0.7.1/toolbox_0.7.1_linux_amd64.tar.gz"
+      sha256 "63892fb7ae710411fc0ef66b12c89d0d2efcdef2b68cb62ee475e862cebafc7a"
 
       def install
         bin.install "toolbox"
